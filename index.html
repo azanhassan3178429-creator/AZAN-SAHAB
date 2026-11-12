@@ -344,7 +344,12 @@ height:320px;
   position:fixed;
   inset:0;
   z-index:999999;
-  background:radial-gradient(circle,#30230b 0%,#100c05 45%,#000 100%);
+  background:
+    linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.85)),
+    url("https://images.unsplash.com/photo-1564769625905-50e93615e769?auto=format&fit=crop&w=1920&q=90");
+  background-position:center;
+  background-size:cover;
+  background-repeat:no-repeat;
   display:flex;
   justify-content:center;
   align-items:center;
