@@ -339,10 +339,112 @@ height:320px;
 .place-card details p{
   padding:15px 5px;
 }
+/* AZAN SAHAB ROYAL INTRO */
+#royal-intro{
+  position:fixed;
+  inset:0;
+  z-index:999999;
+  background:radial-gradient(circle,#30230b 0%,#100c05 45%,#000 100%);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  animation:introFade 1.5s ease;
+}
+
+.intro-content{
+  padding:25px;
+  animation:introZoom 2s ease;
+}
+
+.intro-crown{
+  font-size:65px;
+  color:#f5cc68;
+  text-shadow:0 0 25px #e8b94f;
+  animation:crownGlow 2s infinite alternate;
+}
+
+.intro-content h1{
+  font-size:clamp(35px,7vw,75px);
+  letter-spacing:7px;
+  color:#f5cc68;
+  text-shadow:0 0 15px #d6a83e,0 0 35px #b88b35;
+  margin:15px 0;
+}
+
+.intro-line{
+  width:180px;
+  height:2px;
+  background:#e8b94f;
+  margin:20px auto;
+  box-shadow:0 0 15px #e8b94f;
+}
+
+.intro-content p{
+  color:#fff;
+  letter-spacing:3px;
+  font-size:14px;
+}
+
+.intro-content small{
+  display:block;
+  color:#d6b76b;
+  margin-top:15px;
+  letter-spacing:2px;
+}
+
+.intro-loader{
+  width:120px;
+  height:3px;
+  background:#44351b;
+  margin:35px auto 0;
+  overflow:hidden;
+  position:relative;
+}
+
+.intro-loader:after{
+  content:"";
+  position:absolute;
+  width:45%;
+  height:100%;
+  background:#f5cc68;
+  animation:loaderMove 1.5s infinite;
+}
+
+@keyframes loaderMove{
+  from{left:-45%}
+  to{left:100%}
+}
+
+@keyframes crownGlow{
+  from{text-shadow:0 0 8px #e8b94f}
+  to{text-shadow:0 0 35px #ffd76a}
+}
+
+@keyframes introZoom{
+  from{opacity:0;transform:scale(.7)}
+  to{opacity:1;transform:scale(1)}
+}
+
+@keyframes introFade{
+  from{opacity:0}
+  to{opacity:1}
+}
 </style>
 </head>
 
 <body>
+  
+<div id="royal-intro">
+  <div class="intro-content">
+    <div class="intro-crown">♛</div>
+    <h1>AZAN SAHAB</h1>
+    <div class="intro-line"></div>
+    <p>WELCOME TO MY OFFICIAL WEBSITE</p>
+    <small>ROYAL ELEGANCE • PEACE • INSPIRATION</small>
+    <div class="intro-loader"></div>
+  </div>
+</div>
 
 <header>
 <div class="logo">AZAN SAHAB</div>
@@ -462,5 +564,20 @@ will be added here.
 <p style="margin-top:10px;">Designed with Royal Golden Elegance</p>
 </footer>
 
+<script>
+window.addEventListener("load", function(){
+  setTimeout(function(){
+    const intro = document.getElementById("royal-intro");
+    intro.style.transition = "opacity 1s ease";
+    intro.style.opacity = "0";
+
+    setTimeout(function(){
+      intro.style.display = "none";
+    }, 1000);
+
+  }, 15000);
+});
+</script>
 </body>
+  
 </html>
