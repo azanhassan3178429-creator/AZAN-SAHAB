@@ -1,0 +1,388 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AZAN SAHAB | Official Website</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+:root{
+--gold:#f5c75e;
+--light:#ffe9a6;
+--dark:#050505;
+}
+
+body{
+background:#050505;
+color:white;
+font-family:'Poppins',sans-serif;
+overflow-x:hidden;
+}
+
+header{
+position:fixed;
+top:0;
+width:100%;
+z-index:1000;
+padding:20px 7%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(0,0,0,.88);
+border-bottom:1px solid #a77b2b;
+backdrop-filter:blur(15px);
+}
+
+.logo{
+font-family:'Cinzel',serif;
+font-size:25px;
+font-weight:800;
+color:var(--gold);
+letter-spacing:3px;
+text-shadow:0 0 15px #d69c35;
+}
+
+nav{
+display:flex;
+gap:25px;
+}
+
+nav a{
+color:#eee;
+text-decoration:none;
+font-size:13px;
+transition:.3s;
+}
+
+nav a:hover{
+color:var(--gold);
+text-shadow:0 0 12px gold;
+}
+
+.hero{
+min-height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:130px 20px 80px;
+background:
+linear-gradient(rgba(0,0,0,.48),rgba(0,0,0,.9)),
+url('https://images.unsplash.com/photo-1564769625905-50e93615e769?auto=format&fit=crop&w=2000&q=90');
+background-size:cover;
+background-position:center;
+}
+
+.hero small{
+color:var(--light);
+letter-spacing:7px;
+font-size:12px;
+}
+
+.hero h1{
+font-family:'Cinzel',serif;
+font-size:clamp(42px,8vw,85px);
+margin:25px 0;
+color:var(--gold);
+text-shadow:0 0 15px #d69c35,0 0 35px #a66a13;
+}
+
+.hero p{
+max-width:650px;
+color:#eee;
+line-height:2;
+font-size:15px;
+}
+
+.btn{
+display:inline-block;
+margin-top:35px;
+padding:15px 35px;
+border:1px solid var(--gold);
+color:var(--gold);
+text-decoration:none;
+letter-spacing:2px;
+border-radius:5px;
+transition:.4s;
+}
+
+.btn:hover{
+background:var(--gold);
+color:black;
+box-shadow:0 0 25px #e6b84c;
+transform:translateY(-4px);
+}
+
+section{
+padding:100px 7%;
+}
+
+.section-title{
+font-family:'Cinzel',serif;
+font-size:clamp(28px,5vw,42px);
+color:var(--gold);
+text-align:center;
+margin-bottom:18px;
+text-shadow:0 0 15px #a77b2b;
+}
+
+.subtitle{
+text-align:center;
+color:#aaa;
+margin-bottom:50px;
+font-size:14px;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:25px;
+}
+
+.card{
+padding:35px 25px;
+border:1px solid #98702e;
+border-radius:12px;
+background:linear-gradient(145deg,#201809,#080808);
+text-align:center;
+transition:.4s;
+box-shadow:0 0 15px rgba(212,164,68,.08);
+}
+
+.card:hover{
+transform:translateY(-10px);
+border-color:#ffdf85;
+box-shadow:0 0 30px rgba(255,190,65,.3);
+}
+
+.card h3{
+font-family:'Cinzel',serif;
+color:var(--gold);
+font-size:22px;
+margin-bottom:15px;
+}
+
+.card p{
+color:#bbb;
+line-height:1.8;
+font-size:14px;
+}
+
+.photo-section{
+background:linear-gradient(#090909,#100c05,#050505);
+}
+
+.photo-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
+.photo-card{
+position:relative;
+height:390px;
+overflow:hidden;
+border:1px solid #c39742;
+border-radius:14px;
+box-shadow:0 0 20px rgba(255,193,70,.18);
+}
+
+.photo-card img{
+width:100%;
+height:100%;
+object-fit:cover;
+transition:.6s;
+filter:brightness(.78);
+}
+
+.photo-card:hover img{
+transform:scale(1.08);
+filter:brightness(1.12) drop-shadow(0 0 15px #e6b84c);
+}
+
+.photo-card h3{
+position:absolute;
+bottom:0;
+width:100%;
+padding:25px;
+text-align:center;
+font-family:'Cinzel',serif;
+font-size:28px;
+color:#ffe6a0;
+background:linear-gradient(transparent,rgba(0,0,0,.95));
+text-shadow:0 0 15px gold;
+}
+
+.glow-image{
+animation:glow 3s infinite alternate;
+}
+
+@keyframes glow{
+from{
+box-shadow:0 0 10px #9b712b,0 0 20px #614313;
+}
+to{
+box-shadow:0 0 25px #ffdc82,0 0 50px #b98227;
+}
+}
+
+.about{
+text-align:center;
+max-width:850px;
+margin:auto;
+color:#ccc;
+line-height:2.2;
+}
+
+.updates{
+text-align:center;
+border:1px solid #765722;
+padding:45px 20px;
+border-radius:15px;
+background:linear-gradient(145deg,#1b160d,#080808);
+}
+
+footer{
+text-align:center;
+padding:35px 15px;
+background:#080808;
+border-top:1px solid #98702e;
+color:#aaa;
+font-size:13px;
+}
+
+footer span{
+color:var(--gold);
+}
+
+@media(max-width:700px){
+header{
+flex-direction:column;
+gap:15px;
+}
+nav{
+gap:12px;
+flex-wrap:wrap;
+justify-content:center;
+}
+nav a{
+font-size:11px;
+}
+section{
+padding:75px 6%;
+}
+.photo-card{
+height:320px;
+}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="logo">AZAN SAHAB</div>
+<nav>
+<a href="#home">HOME</a>
+<a href="#about">ABOUT</a>
+<a href="#places">PLACES</a>
+<a href="#gallery">GALLERY</a>
+<a href="#updates">UPDATES</a>
+</nav>
+</header>
+
+<section class="hero" id="home">
+<small>WELCOME TO THE OFFICIAL WEBSITE</small>
+<h1>AZAN SAHAB</h1>
+<p>
+A Beautiful World of Islamic Inspiration,
+Royal Elegance and Peace.
+Explore the beauty of Makkah and Madinah.
+</p>
+<a href="#places" class="btn">EXPLORE MORE</a>
+</section>
+
+<section id="about">
+<h2 class="section-title">ABOUT US</h2>
+<p class="subtitle">Discover the Royal Experience</p>
+<p class="about">
+Welcome to AZAN SAHAB Official Website.
+A special place created with elegance,
+beautiful Islamic inspiration and golden design.
+May Allah bless everyone with peace and happiness.
+</p>
+</section>
+
+<section id="places">
+<h2 class="section-title">HOLY PLACES</h2>
+<p class="subtitle">Explore the Beauty of the Blessed Cities</p>
+
+<div class="cards">
+<div class="card">
+<h3>MAKKAH</h3>
+<p>Discover the beauty and blessings of the Holy City of Makkah.</p>
+</div>
+
+<div class="card">
+<h3>MADINAH</h3>
+<p>Experience the peace and beauty of the blessed city of Madinah.</p>
+</div>
+
+<div class="card">
+<h3>ISLAMIC WORLD</h3>
+<p>Explore Islamic inspiration, knowledge and beautiful reminders.</p>
+</div>
+</div>
+</section>
+
+<section class="photo-section" id="gallery">
+<h2 class="section-title">ROYAL GALLERY</h2>
+<p class="subtitle">Beautiful Views of the Holy Cities</p>
+
+<div class="photo-grid">
+
+<div class="photo-card glow-image">
+<img src="https://images.unsplash.com/photo-1564769625905-50e93615e769?auto=format&fit=crop&w=1200&q=90" alt="Makkah">
+<h3>MAKKAH</h3>
+</div>
+
+<div class="photo-card glow-image">
+<img src="https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?auto=format&fit=crop&w=1200&q=90" alt="Madinah">
+<h3>MADINAH</h3>
+</div>
+
+</div>
+</section>
+
+<section id="updates">
+<h2 class="section-title">LATEST UPDATES</h2>
+<p class="subtitle">Stay Connected With AZAN SAHAB</p>
+<div class="updates">
+<h3 style="color:#f5c75e;font-family:Cinzel,serif;margin-bottom:15px;">
+COMING SOON
+</h3>
+<p style="color:#bbb;line-height:2;">
+More beautiful content and exciting updates
+will be added here.
+</p>
+</div>
+</section>
+
+<footer>
+<p>© 2026 <span>AZAN SAHAB</span> | OFFICIAL WEBSITE</p>
+<p style="margin-top:10px;">Designed with Royal Golden Elegance</p>
+</footer>
+
+</body>
+</html>
