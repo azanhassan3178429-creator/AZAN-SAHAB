@@ -286,6 +286,59 @@ padding:75px 6%;
 height:320px;
 }
 }
+/* HOLY PLACES PREMIUM DESIGN */
+.place-card{
+  background:linear-gradient(145deg,#1b160d,#080808);
+  border:1px solid #d6a83e;
+  border-radius:15px;
+  overflow:hidden;
+  box-shadow:0 0 18px rgba(232,185,79,.25);
+  transition:.4s;
+}
+
+.place-card:hover{
+  box-shadow:0 0 30px #d6a83e;
+  transform:translateY(-5px);
+}
+
+.place-card img{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+}
+
+.place-content{
+  padding:20px;
+  text-align:center;
+}
+
+.place-content h3{
+  color:#e8b94f;
+  margin-bottom:12px;
+}
+
+.place-content p{
+  color:#ccc;
+  line-height:1.7;
+}
+
+.place-card details{
+  margin-top:15px;
+  color:#eee;
+}
+
+.place-card summary{
+  color:#e8b94f;
+  cursor:pointer;
+  font-weight:bold;
+  border:1px solid #d6a83e;
+  padding:12px;
+  border-radius:8px;
+}
+
+.place-card details p{
+  padding:15px 5px;
+}
 </style>
 </head>
 
@@ -324,25 +377,50 @@ May Allah bless everyone with peace and happiness.
 </p>
 </section>
 
+
 <section id="places">
+
 <h2 class="section-title">HOLY PLACES</h2>
 <p class="subtitle">Explore the Beauty of the Blessed Cities</p>
 
-<div class="cards">
-<div class="card">
+<div class="photo-grid">
+
+<div class="place-card glow-image">
+<img src="https://images.unsplash.com/photo-1564769625905-50e93615e769?auto=format&fit=crop&w=1200&q=90" alt="Makkah">
+<div class="place-content">
 <h3>MAKKAH</h3>
-<p>Discover the beauty and blessings of the Holy City of Makkah.</p>
+<p>The Holy City of Makkah, home of the blessed Kaaba.</p>
+<details>
+<summary>EXPLORE MORE</summary>
+<p>Discover the beauty of Masjid al-Haram and the sacred Kaaba. A special destination for Muslims around the world.</p>
+</details>
+</div>
 </div>
 
-<div class="card">
+<div class="place-card glow-image">
+<img src="https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?auto=format&fit=crop&w=1200&q=90" alt="Madinah">
+<div class="place-content">
 <h3>MADINAH</h3>
-<p>Experience the peace and beauty of the blessed city of Madinah.</p>
+<p>The peaceful city of our beloved Prophet ﷺ.</p>
+<details>
+<summary>EXPLORE MORE</summary>
+<p>Explore Al-Masjid an-Nabawi and learn about the beautiful Islamic history of Madinah.</p>
+</details>
+</div>
 </div>
 
-<div class="card">
+<div class="place-card glow-image">
+<img src="https://images.unsplash.com/photo-1609599006353-e629aaabfeae?auto=format&fit=crop&w=1200&q=90" alt="Islamic World">
+<div class="place-content">
 <h3>ISLAMIC WORLD</h3>
-<p>Explore Islamic inspiration, knowledge and beautiful reminders.</p>
+<p>Discover Islamic beauty, knowledge and history.</p>
+<details>
+<summary>EXPLORE MORE</summary>
+<p>Explore Islamic architecture, Quranic knowledge, duas and the beautiful traditions of Muslims worldwide.</p>
+</details>
 </div>
+</div>
+
 </div>
 </section>
 
